@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5232DCB32811F67F00085798 /* DiscoverSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */; };
+		5232DCB42811F67F00085798 /* DiscoverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB02811F67F00085798 /* DiscoverScene.swift */; };
+		5232DCB52811F67F00085798 /* DiscoverSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */; };
+		5232DCB62811F67F00085798 /* DiscoverSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */; };
 		5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245750B28118B9B00B48B86 /* AppDelegate.swift */; };
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneViewModel.swift; sourceTree = "<group>"; };
+		5232DCB02811F67F00085798 /* DiscoverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene.swift; sourceTree = "<group>"; };
+		5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneDIContainer.swift; sourceTree = "<group>"; };
+		5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneCoordinator.swift; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5245750B28118B9B00B48B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5245751428118B9E00B48B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5232DCAE2811F66C00085798 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */,
+				5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */,
+				5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */,
+				5232DCB02811F67F00085798 /* DiscoverScene.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 		524574FF28118B9B00B48B86 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +125,7 @@
 			children = (
 				5291E29328118E5B00285D72 /* TabBar */,
 				5291E29428118E6100285D72 /* WatchList */,
+				5232DCAE2811F66C00085798 /* Discover */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -260,9 +280,13 @@
 				5291E29A28118E9F00285D72 /* WatchListScene.swift in Sources */,
 				5291E29E28118EE900285D72 /* TabBarCoordinator.swift in Sources */,
 				5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */,
+				5232DCB62811F67F00085798 /* DiscoverSceneCoordinator.swift in Sources */,
 				5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */,
+				5232DCB52811F67F00085798 /* DiscoverSceneDIContainer.swift in Sources */,
 				5291E28B28118D6D00285D72 /* R.generated.swift in Sources */,
 				5291E29C28118E9F00285D72 /* WatchListSceneCoordinator.swift in Sources */,
+				5232DCB42811F67F00085798 /* DiscoverScene.swift in Sources */,
+				5232DCB32811F67F00085798 /* DiscoverSceneViewModel.swift in Sources */,
 				5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,4 +16,10 @@ final class AppDIContainer {
         
         return WatchListSceneDIContainer(dependencies: dependencies)
     }()
+    
+    private(set) lazy var discoverSceneDIContainer: DiscoverSceneDIContainer = {
+        let dependencies = DiscoverSceneDIContainer.Dependencies()
+        
+        return DiscoverSceneDIContainer(dependencies: dependencies)
+    }()
 }

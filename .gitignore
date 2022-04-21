@@ -36,3 +36,4 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 Spark/Resources/R.generated.swift
+TVPulse/Resources/R.generated.swift

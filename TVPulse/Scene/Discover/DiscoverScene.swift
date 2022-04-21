@@ -1,5 +1,5 @@
 //
-//  WatchListScene.swift
+//  DiscoverScene.swift
 //  TVPulse
 //
 //  Created by Maxime Maheo on 21/04/2022.
@@ -8,24 +8,24 @@
 
 import SwiftUI
 
-struct WatchListScene: View {
+struct DiscoverScene: View {
     
     // MARK: - Properties
     
-    @StateObject var viewModel: WatchListSceneViewModel
+    @StateObject var viewModel: DiscoverSceneViewModel
     
     // MARK: - Body
     
     var body: some View {
-        Text("Watch list")
+        Text("Discover")
     }
 }
 
 #if DEBUG
 
-struct WatchListScene_Previews: PreviewProvider {
+struct DiscoverScene_Previews: PreviewProvider {
     static var previews: some View {
-        WatchListScene(viewModel: WatchListSceneViewModel.preview)
+        DiscoverScene(viewModel: DiscoverSceneViewModel.preview)
     }
 }
 

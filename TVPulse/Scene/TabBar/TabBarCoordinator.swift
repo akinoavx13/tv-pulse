@@ -21,7 +21,8 @@ final class TabBarCoordinator: CoordinatorProtocol {
     private let appDIContainer: AppDIContainer
 
     private enum Tab {
-        case watchList
+        case watchList,
+             discover
     }
     
     // MARK: - Lifecycle
@@ -36,6 +37,7 @@ final class TabBarCoordinator: CoordinatorProtocol {
     
     func start() {
         add(tab: .watchList)
+        add(tab: .discover)
         
         window.updateRootViewController(with: tabBarController)
     }
@@ -60,8 +62,17 @@ final class TabBarCoordinator: CoordinatorProtocol {
                 .watchListSceneDIContainer
                 .makeCoordinator(navigationController: navigationController)
             
-            let tabBarItem = UITabBarItem(title: "Watch list",
-                                          image: UIImage(systemName: "square.grid.2x2"),
+            let tabBarItem = UITabBarItem(title: "§Watch list",
+                                          image: R.image.icons.tvRegular(),
+                                          selectedImage: nil)
+            navigationController.tabBarItem = tabBarItem
+        case .discover:
+            coordinator = appDIContainer
+                .discoverSceneDIContainer
+                .makeCoordinator(navigationController: navigationController)
+            
+            let tabBarItem = UITabBarItem(title: "§Discover",
+                                          image: R.image.icons.magnifyingGlassRegular(),
                                           selectedImage: nil)
             navigationController.tabBarItem = tabBarItem
         }
