@@ -9,8 +9,14 @@
 import UIKit.UINavigationController
 import SwiftUI
 import Core
+import TMDB
 
-public protocol DiscoverSceneCoordinatorDependencies: AnyObject { }
+public protocol DiscoverSceneCoordinatorDependencies: AnyObject {
+    
+    // MARK: - Properties
+    
+    var tmdbService: TMDBServiceProtocol { get }
+}
 
 public final class DiscoverSceneCoordinator: CoordinatorProtocol {
     
@@ -34,10 +40,12 @@ public final class DiscoverSceneCoordinator: CoordinatorProtocol {
     
     @MainActor
     public func start() {
-        let viewModel = DiscoverSceneViewModel()
+        navigationController.navigationBar.prefersLargeTitles = true
+        let viewModel = DiscoverSceneViewModel(tmdbService: dependencies.tmdbService)
         viewModel.coordinator = self
         
         let viewController = UIHostingController(rootView: DiscoverScene(viewModel: viewModel))
+        viewController.title = "§Discover"
         
         navigationController.setViewControllers([viewController],
                                                 animated: false)

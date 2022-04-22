@@ -7,14 +7,21 @@
 //
 
 import UIKit.UINavigationController
+import TMDB
 
 public final class DiscoverSceneDIContainer {
     
     public struct Dependencies {
         
+        // MARK: - Properties
+        
+        let tmdbService: TMDBServiceProtocol
+        
         // MARK: - Lifecycle
         
-        public init() { }
+        public init(tmdbService: TMDBServiceProtocol) {
+            self.tmdbService = tmdbService
+        }
     }
     
     // MARK: - Properties
@@ -37,4 +44,9 @@ public final class DiscoverSceneDIContainer {
 
 // MARK: - DiscoverSceneCoordinatorDependencies -
 
-extension DiscoverSceneDIContainer: DiscoverSceneCoordinatorDependencies { }
+extension DiscoverSceneDIContainer: DiscoverSceneCoordinatorDependencies {
+    
+    // MARK: - Properties
+    
+    public var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
+}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522D8D042812D6DC0085A879 /* TMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D032812D6DC0085A879 /* TMDB */; };
+		522D8D062812DC3A0085A879 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D052812DC3A0085A879 /* Model */; };
 		523FE4AE2812C910004937E1 /* Discover in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AD2812C910004937E1 /* Discover */; };
 		523FE4B02812C910004937E1 /* WatchList in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AF2812C910004937E1 /* WatchList */; };
 		523FE4B32812C96D004937E1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522D8D072812E78B0085A879 /* Component */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Component; path = Modules/Component; sourceTree = "<group>"; };
 		523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5245750B28118B9B00B48B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522D8D062812DC3A0085A879 /* Model in Frameworks */,
 				523FE4B02812C910004937E1 /* WatchList in Frameworks */,
 				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 				52723C832812AC6000DC107C /* Core in Frameworks */,
@@ -64,6 +67,7 @@
 		524574FF28118B9B00B48B86 = {
 			isa = PBXGroup;
 			children = (
+				522D8D072812E78B0085A879 /* Component */,
 				52723C842812BEF900DC107C /* Feature */,
 				52723C772812AB7800DC107C /* Model */,
 				52723C7E2812ABE700DC107C /* Service */,
@@ -152,6 +156,7 @@
 				523FE4AD2812C910004937E1 /* Discover */,
 				523FE4AF2812C910004937E1 /* WatchList */,
 				522D8D032812D6DC0085A879 /* TMDB */,
+				522D8D052812DC3A0085A879 /* Model */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -480,6 +485,10 @@
 		522D8D032812D6DC0085A879 /* TMDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TMDB;
+		};
+		522D8D052812DC3A0085A879 /* Model */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Model;
 		};
 		523FE4AD2812C910004937E1 /* Discover */ = {
 			isa = XCSwiftPackageProductDependency;

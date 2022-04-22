@@ -20,13 +20,13 @@ final class AppDIContainer {
     // MARK: - Containers
     
     private(set) lazy var watchListSceneDIContainer: WatchListSceneDIContainer = {
-        let dependencies = WatchListSceneDIContainer.Dependencies(tmdbService: tmdbService)
+        let dependencies = WatchListSceneDIContainer.Dependencies()
         
         return WatchListSceneDIContainer(dependencies: dependencies)
     }()
     
     private(set) lazy var discoverSceneDIContainer: DiscoverSceneDIContainer = {
-        let dependencies = DiscoverSceneDIContainer.Dependencies()
+        let dependencies = DiscoverSceneDIContainer.Dependencies(tmdbService: tmdbService)
         
         return DiscoverSceneDIContainer(dependencies: dependencies)
     }()

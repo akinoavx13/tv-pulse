@@ -7,7 +7,6 @@
 //
 
 import Combine
-import TMDB
 
 @MainActor
 final class WatchListSceneViewModel: ObservableObject {
@@ -15,30 +14,12 @@ final class WatchListSceneViewModel: ObservableObject {
     // MARK: - Properties
     
     weak var coordinator: WatchListSceneCoordinator?
-    
-    private let tmdbService: TMDBServiceProtocol
-    
-    // MARK: - Lifecycle
-    
-    init(tmdbService: TMDBServiceProtocol) {
-        self.tmdbService = tmdbService
-        
-        Task {
-            do {
-                let tvShow = try await tmdbService.fetchDiscoverTVShow()
-                
-                print(tvShow)
-            } catch {
-                print(error)
-            }
-        }
-    }
 }
 
 #if DEBUG
 
 extension WatchListSceneViewModel {
-    static let preview = WatchListSceneViewModel(tmdbService: TMDBService())
+    static let preview = WatchListSceneViewModel()
 }
 
 #endif

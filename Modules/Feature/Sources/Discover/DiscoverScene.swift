@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Component
 
 struct DiscoverScene: View {
     
@@ -17,7 +18,27 @@ struct DiscoverScene: View {
     // MARK: - Body
     
     var body: some View {
-        Text("Discover")
+        ScrollView(.vertical) {
+            LazyVStack {
+                ScrollView(.horizontal,
+                           showsIndicators: false) {
+                    LazyHStack {
+                        ForEach(viewModel.tvShows) { tvShow in
+                            if viewModel.tvShows.first == tvShow {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                    .padding(.leading, 8)
+                            } else if viewModel.tvShows.last == tvShow {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                    .padding(.trailing, 8)
+                            } else {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                            }
+                        }
+                    }
+                }
+                .frame(height: 225)
+            }
+        }
     }
 }
 

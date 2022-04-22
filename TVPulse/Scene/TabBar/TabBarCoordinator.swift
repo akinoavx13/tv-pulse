@@ -36,8 +36,8 @@ final class TabBarCoordinator: CoordinatorProtocol {
     // MARK: - Methods
     
     func start() {
-        add(tab: .watchList)
         add(tab: .discover)
+        add(tab: .watchList)
         
         window.updateRootViewController(with: tabBarController)
     }

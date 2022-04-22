@@ -14,15 +14,17 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Core", path: "./Core"),
-        .package(name: "Service", path: "./Service")
+        .package(name: "Service", path: "./Service"),
+        .package(name: "Component", path: "./Component")
     ],
     targets: [
         .target(name: "WatchList", dependencies: [
-            "Core",
-            .product(name: "TMDB", package: "Service")
+            "Core"
         ]),
         .target(name: "Discover", dependencies: [
-            "Core"
+            "Core",
+            "Component",
+            .product(name: "TMDB", package: "Service")
         ])
     ]
 )
