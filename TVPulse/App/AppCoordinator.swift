@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TPCore
+import Core
 
 final class AppCoordinator {
     

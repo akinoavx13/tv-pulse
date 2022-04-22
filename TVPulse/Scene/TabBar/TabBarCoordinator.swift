@@ -7,7 +7,7 @@
 
 import UIKit.UINavigationController
 import UIKit.UITabBarController
-import TPCore
+import Core
 
 final class TabBarCoordinator: CoordinatorProtocol {
     

@@ -8,7 +8,7 @@
 
 import UIKit.UINavigationController
 import SwiftUI
-import TPCore
+import Core
 
 protocol DiscoverSceneCoordinatorDependencies: AnyObject { }
 

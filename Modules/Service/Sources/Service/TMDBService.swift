@@ -6,7 +6,7 @@
 //
 
 import Model
-import TPCore
+import Core
 
 public protocol TMDBServiceProtocol {
     

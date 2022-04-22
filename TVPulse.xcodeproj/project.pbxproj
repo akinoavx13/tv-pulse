@@ -15,8 +15,8 @@
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
 		52723C792812AB8100DC107C /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C782812AB8100DC107C /* Rswift */; };
-		52723C7B2812AB8400DC107C /* TPService in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7A2812AB8400DC107C /* TPService */; };
-		52723C7D2812AB8700DC107C /* TPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7C2812AB8700DC107C /* TPCore */; };
+		52723C802812ABF000DC107C /* Service in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7F2812ABF000DC107C /* Service */; };
+		52723C832812AC6000DC107C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C822812AC6000DC107C /* Core */; };
 		5291E28B28118D6D00285D72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E28A28118D6D00285D72 /* R.generated.swift */; };
 		5291E29928118E9F00285D72 /* WatchListSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */; };
 		5291E29A28118E9F00285D72 /* WatchListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29628118E9F00285D72 /* WatchListScene.swift */; };
@@ -32,15 +32,15 @@
 		5232DCB02811F67F00085798 /* DiscoverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene.swift; sourceTree = "<group>"; };
 		5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneDIContainer.swift; sourceTree = "<group>"; };
 		5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneCoordinator.swift; sourceTree = "<group>"; };
-		5232DCB72811F88400085798 /* TPService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPService; path = Modules/TPService; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5245750B28118B9B00B48B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5245751428118B9E00B48B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5245751728118B9E00B48B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5245751928118B9E00B48B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52723C772812AB7800DC107C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Model; path = Modules/Model; sourceTree = "<group>"; };
+		52723C7E2812ABE700DC107C /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Service; path = Modules/Service; sourceTree = "<group>"; };
+		52723C812812AC3D00DC107C /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		5291E28A28118D6D00285D72 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		5291E28F28118DEE00285D72 /* TPCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPCore; path = Modules/TPCore; sourceTree = "<group>"; };
 		5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneViewModel.swift; sourceTree = "<group>"; };
 		5291E29628118E9F00285D72 /* WatchListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListScene.swift; sourceTree = "<group>"; };
 		5291E29728118E9F00285D72 /* WatchListSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -55,9 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52723C7D2812AB8700DC107C /* TPCore in Frameworks */,
-				52723C7B2812AB8400DC107C /* TPService in Frameworks */,
+				52723C802812ABF000DC107C /* Service in Frameworks */,
 				52723C792812AB8100DC107C /* Rswift in Frameworks */,
+				52723C832812AC6000DC107C /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				52723C772812AB7800DC107C /* Model */,
-				5232DCB72811F88400085798 /* TPService */,
-				5291E28F28118DEE00285D72 /* TPCore */,
+				52723C7E2812ABE700DC107C /* Service */,
+				52723C812812AC3D00DC107C /* Core */,
 				5245750A28118B9B00B48B86 /* TVPulse */,
 				5245750928118B9B00B48B86 /* Products */,
 				5291E29028118E0C00285D72 /* Frameworks */,
@@ -182,8 +182,8 @@
 			name = TVPulse;
 			packageProductDependencies = (
 				52723C782812AB8100DC107C /* Rswift */,
-				52723C7A2812AB8400DC107C /* TPService */,
-				52723C7C2812AB8700DC107C /* TPCore */,
+				52723C7F2812ABF000DC107C /* Service */,
+				52723C822812AC6000DC107C /* Core */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -522,13 +522,13 @@
 			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
 		};
-		52723C7A2812AB8400DC107C /* TPService */ = {
+		52723C7F2812ABF000DC107C /* Service */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TPService;
+			productName = Service;
 		};
-		52723C7C2812AB8700DC107C /* TPCore */ = {
+		52723C822812AC6000DC107C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TPCore;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

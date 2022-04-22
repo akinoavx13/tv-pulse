@@ -4,15 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "TPCore",
+    name: "Service",
     platforms: [
         .iOS(.v15)
     ],
     products: [
-        .library(name: "TPCore", targets: ["TPCore"])
+        .library(name: "Service", targets: ["Service"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "./Core"),
+        .package(path: "./Model")
+    ],
     targets: [
-        .target(name: "TPCore", dependencies: [])
+        .target(name: "Service", dependencies: ["Core", "Model"])
     ]
 )

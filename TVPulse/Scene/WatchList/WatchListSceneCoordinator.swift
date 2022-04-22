@@ -8,8 +8,8 @@
 
 import UIKit.UINavigationController
 import SwiftUI
-import TPCore
-import TPService
+import Core
+import Service
 
 protocol WatchListSceneCoordinatorDependencies: AnyObject {
     

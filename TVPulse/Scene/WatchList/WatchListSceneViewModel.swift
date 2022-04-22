@@ -7,8 +7,7 @@
 //
 
 import Combine
-import TPCore
-import TPService
+import Service
 
 @MainActor
 final class WatchListSceneViewModel: ObservableObject {

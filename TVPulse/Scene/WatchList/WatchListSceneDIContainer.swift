@@ -7,7 +7,7 @@
 //
 
 import UIKit.UINavigationController
-import TPService
+import Service
 
 final class WatchListSceneDIContainer {
     
