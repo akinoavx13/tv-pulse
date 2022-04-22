@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Component
+import Model
 
 struct DiscoverScene: View {
     
@@ -20,23 +21,42 @@ struct DiscoverScene: View {
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack {
-                ScrollView(.horizontal,
-                           showsIndicators: false) {
-                    LazyHStack {
-                        ForEach(viewModel.tvShows) { tvShow in
-                            if viewModel.tvShows.first == tvShow {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                    .padding(.leading, 8)
-                            } else if viewModel.tvShows.last == tvShow {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                    .padding(.trailing, 8)
-                            } else {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                            }
+                ForEach(viewModel.sections) { section in
+                    makeSectionView(title: section.title,
+                                    tvShows: section.tvShows)
+                }
+            }
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func makeSectionView(title: String,
+                                 tvShows: [TVShow]) -> some View {
+        Section {
+            ScrollView(.horizontal,
+                       showsIndicators: false) {
+                LazyHStack {
+                    ForEach(tvShows) { tvShow in
+                        if tvShows.first == tvShow {
+                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                .padding(.leading, 8)
+                        } else if tvShows.last == tvShow {
+                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                .padding(.trailing, 8)
+                        } else {
+                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
                         }
                     }
                 }
-                .frame(height: 225)
+            }
+        } header: {
+            HStack {
+                Text(title)
+                    .font(.headline)
+                    .padding(.leading, 8)
+                
+                Spacer()
             }
         }
     }

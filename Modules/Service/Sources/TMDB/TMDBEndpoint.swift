@@ -9,7 +9,8 @@ import Networking
 import Foundation.NSURL
 
 enum TMDBEndpoint: String, Endpoint {
-    case dicoverTV = "discover/tv"
+    case popularTVShows = "tv/popular"
+    case topRatedTVShows = "tv/top_rated"
     
     public func build() -> URL {
         guard let baseURL = URL(string: "https://api.themoviedb.org/3") else { fatalError() }

@@ -9,14 +9,22 @@
 import Combine
 import TMDB
 import Model
+import Foundation.NSUUID
 
 @MainActor
 final class DiscoverSceneViewModel: ObservableObject {
     
+    struct Section: Identifiable {
+        let id = UUID()
+        let title: String
+        let tvShows: [TVShow]
+    }
+    
     // MARK: - Properties
     
-    @Published private(set) var tvShows: [TVShow] = []
-    
+    @Published private(set) var sections: [Section] = []
+    @Published var error: Error?
+
     weak var coordinator: DiscoverSceneCoordinator?
     
     private let tmdbService: TMDBServiceProtocol
@@ -34,10 +42,14 @@ final class DiscoverSceneViewModel: ObservableObject {
     // MARK: - Private methods
     
     private func fetchDiscover() async {
+        async let popularTVShows: [TVShow] = tmdbService.fetchPopularTVShow()
+        async let topRatedTVShows: [TVShow] = tmdbService.fetchTopRatedTVShow()
+        
         do {
-            tvShows = try await tmdbService.fetchDiscoverTVShow()
+            sections = try await [.init(title: "§Popular", tvShows: popularTVShows),
+                                  .init(title: "§Top rated", tvShows: topRatedTVShows)]
         } catch {
-            fatalError(error.localizedDescription)
+            self.error = error
         }
     }
 }
