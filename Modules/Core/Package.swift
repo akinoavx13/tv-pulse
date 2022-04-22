@@ -9,10 +9,12 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "Core", targets: ["Core"])
+        .library(name: "Core", targets: ["Core"]),
+        .library(name: "Networking", targets: ["Networking"])
     ],
     dependencies: [],
     targets: [
-        .target(name: "Core", dependencies: [])
+        .target(name: "Core", dependencies: []),
+        .target(name: "Networking", dependencies: [])
     ]
 )

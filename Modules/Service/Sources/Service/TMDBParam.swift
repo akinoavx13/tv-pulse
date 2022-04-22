@@ -5,7 +5,7 @@
 //  Created by Maxime Maheo on 22/04/2022.
 //
 
-import Core
+import Networking
 import Foundation.NSURL
 
 enum TMDBParam: Param {

@@ -5,8 +5,6 @@
 //  Created by Maxime Maheo on 16/04/2022.
 //
 
-import UIKit.UINavigationController
-
 public protocol CoordinatorProtocol: AnyObject {
     
     // MARK: - Properties

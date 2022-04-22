@@ -12,10 +12,14 @@ let package = Package(
         .library(name: "Service", targets: ["Service"])
     ],
     dependencies: [
-        .package(path: "./Core"),
-        .package(path: "./Model")
+        .package(name: "Core", path: "./Core"),
+        .package(name: "Model", path: "./Model")
     ],
     targets: [
-        .target(name: "Service", dependencies: ["Core", "Model"])
+        .target(name: "Service", dependencies: [
+            "Core",
+            "Model",
+            .product(name: "Networking", package: "Core")
+        ])
     ]
 )
