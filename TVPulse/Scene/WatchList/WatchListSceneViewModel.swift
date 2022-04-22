@@ -10,6 +10,7 @@ import Combine
 import TPCore
 import TPService
 
+@MainActor
 final class WatchListSceneViewModel: ObservableObject {
     
     // MARK: - Properties

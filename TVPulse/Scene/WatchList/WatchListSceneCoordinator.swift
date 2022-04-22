@@ -39,7 +39,7 @@ final class WatchListSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start() {
+    @MainActor func start() {
         let viewModel = WatchListSceneViewModel(tmdbService: dependencies.tmdbService)
         viewModel.coordinator = self
         

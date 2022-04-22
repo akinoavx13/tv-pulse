@@ -32,7 +32,7 @@ final class DiscoverSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start() {
+    @MainActor func start() {
         let viewModel = DiscoverSceneViewModel()
         viewModel.coordinator = self
         

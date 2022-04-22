@@ -8,6 +8,7 @@
 
 import Combine
 
+@MainActor
 final class DiscoverSceneViewModel: ObservableObject {
     
     // MARK: - Properties
