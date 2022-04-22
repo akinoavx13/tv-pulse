@@ -8,6 +8,7 @@
 import TMDB
 import WatchList
 import Discover
+import TVShowDetail
 
 final class AppDIContainer {
     
@@ -26,8 +27,15 @@ final class AppDIContainer {
     }()
     
     private(set) lazy var discoverSceneDIContainer: DiscoverSceneDIContainer = {
-        let dependencies = DiscoverSceneDIContainer.Dependencies(tmdbService: tmdbService)
+        let dependencies = DiscoverSceneDIContainer.Dependencies(tmdbService: tmdbService,
+                                                                 tvShowDetailDIContainer: tvShowDetailSceneDIContainer)
         
         return DiscoverSceneDIContainer(dependencies: dependencies)
+    }()
+    
+    private(set) lazy var tvShowDetailSceneDIContainer: TVShowDetailSceneDIContainer = {
+        let dependencies = TVShowDetailSceneDIContainer.Dependencies()
+        
+        return TVShowDetailSceneDIContainer(dependencies: dependencies)
     }()
 }

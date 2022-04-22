@@ -11,6 +11,7 @@ import Networking
 public protocol TMDBServiceProtocol {
     func fetchPopularTVShow() async throws -> [TVShow]
     func fetchTopRatedTVShow() async throws -> [TVShow]
+    func fetchDiscoverTVShow(genres: [TMDBParam.Genres]) async throws -> [TVShow]
 }
 
 public final class TMDBService: TMDBServiceProtocol {
@@ -39,6 +40,20 @@ public final class TMDBService: TMDBServiceProtocol {
         let response: PaginatedResponse<TVShow> = try await apiRequester.fetch(endpoint: TMDBEndpoint.topRatedTVShows,
                                                                                params: [TMDBParam.apiKey,
                                                                                         TMDBParam.language])
+        
+        return response.results
+    }
+    
+    public func fetchDiscoverTVShow(genres: [TMDBParam.Genres]) async throws -> [TVShow] {
+        var params = [TMDBParam.apiKey,
+                      TMDBParam.language]
+        
+        if !genres.isEmpty {
+            params.append(TMDBParam.genres(values: genres))
+        }
+        
+        let response: PaginatedResponse<TVShow> = try await apiRequester.fetch(endpoint: TMDBEndpoint.discoverTVShows,
+                                                                               params: params)
         
         return response.results
     }

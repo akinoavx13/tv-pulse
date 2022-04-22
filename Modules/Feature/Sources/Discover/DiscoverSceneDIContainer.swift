@@ -8,6 +8,7 @@
 
 import UIKit.UINavigationController
 import TMDB
+import TVShowDetail
 
 public final class DiscoverSceneDIContainer {
     
@@ -16,11 +17,14 @@ public final class DiscoverSceneDIContainer {
         // MARK: - Properties
         
         let tmdbService: TMDBServiceProtocol
+        let tvShowDetailDIContainer: TVShowDetailSceneDIContainer
         
         // MARK: - Lifecycle
         
-        public init(tmdbService: TMDBServiceProtocol) {
+        public init(tmdbService: TMDBServiceProtocol,
+                    tvShowDetailDIContainer: TVShowDetailSceneDIContainer) {
             self.tmdbService = tmdbService
+            self.tvShowDetailDIContainer = tvShowDetailDIContainer
         }
     }
     
@@ -49,4 +53,5 @@ extension DiscoverSceneDIContainer: DiscoverSceneCoordinatorDependencies {
     // MARK: - Properties
     
     public var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
+    public var tvShowDetailDIContainer: TVShowDetailSceneDIContainer { dependencies.tvShowDetailDIContainer }
 }

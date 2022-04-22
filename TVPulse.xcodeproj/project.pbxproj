@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		522D8D042812D6DC0085A879 /* TMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D032812D6DC0085A879 /* TMDB */; };
 		522D8D062812DC3A0085A879 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D052812DC3A0085A879 /* Model */; };
+		522D8D11281303550085A879 /* TVShowDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D10281303550085A879 /* TVShowDetail */; };
 		523FE4AE2812C910004937E1 /* Discover in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AD2812C910004937E1 /* Discover */; };
 		523FE4B02812C910004937E1 /* WatchList in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AF2812C910004937E1 /* WatchList */; };
 		523FE4B32812C96D004937E1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */; };
@@ -46,6 +47,7 @@
 			files = (
 				522D8D062812DC3A0085A879 /* Model in Frameworks */,
 				523FE4B02812C910004937E1 /* WatchList in Frameworks */,
+				522D8D11281303550085A879 /* TVShowDetail in Frameworks */,
 				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 				52723C832812AC6000DC107C /* Core in Frameworks */,
 				523FE4AE2812C910004937E1 /* Discover in Frameworks */,
@@ -157,6 +159,7 @@
 				523FE4AF2812C910004937E1 /* WatchList */,
 				522D8D032812D6DC0085A879 /* TMDB */,
 				522D8D052812DC3A0085A879 /* Model */,
+				522D8D10281303550085A879 /* TVShowDetail */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -489,6 +492,10 @@
 		522D8D052812DC3A0085A879 /* Model */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Model;
+		};
+		522D8D10281303550085A879 /* TVShowDetail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TVShowDetail;
 		};
 		523FE4AD2812C910004937E1 /* Discover */ = {
 			isa = XCSwiftPackageProductDependency;

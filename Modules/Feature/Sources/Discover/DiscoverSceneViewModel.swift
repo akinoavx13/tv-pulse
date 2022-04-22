@@ -35,19 +35,27 @@ final class DiscoverSceneViewModel: ObservableObject {
         self.tmdbService = tmdbService
         
         Task {
-            await fetchDiscover()
+            await fetchData()
         }
+    }
+    
+    // MARK: - Methods
+    
+    func pushTVShowDetails(id: Int) {
+        coordinator?.pushTVShowDetails(id: id)
     }
     
     // MARK: - Private methods
     
-    private func fetchDiscover() async {
-        async let popularTVShows: [TVShow] = tmdbService.fetchPopularTVShow()
-        async let topRatedTVShows: [TVShow] = tmdbService.fetchTopRatedTVShow()
+    private func fetchData() async {
+        async let popularTVShows = tmdbService.fetchPopularTVShow()
+        async let topRatedTVShows = tmdbService.fetchTopRatedTVShow()
+        async let scienceFictionTVShows = tmdbService.fetchDiscoverTVShow(genres: [.scienceFiction])
         
         do {
             sections = try await [.init(title: "§Popular", tvShows: popularTVShows),
-                                  .init(title: "§Top rated", tvShows: topRatedTVShows)]
+                                  .init(title: "§Top rated", tvShows: topRatedTVShows),
+                                  .init(title: "§Science Fiction", tvShows: scienceFictionTVShows)]
         } catch {
             self.error = error
         }

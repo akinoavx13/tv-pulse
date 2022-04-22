@@ -40,6 +40,7 @@ public struct PosterView: View {
                 makePlaceholderView()
             }
         }
+        .cornerRadius(8)
         .frame(width: width,
                height: width * 1.5)
     }

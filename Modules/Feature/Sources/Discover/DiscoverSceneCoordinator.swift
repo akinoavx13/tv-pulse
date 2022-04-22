@@ -10,12 +10,15 @@ import UIKit.UINavigationController
 import SwiftUI
 import Core
 import TMDB
+import TVShowDetail
 
 public protocol DiscoverSceneCoordinatorDependencies: AnyObject {
     
     // MARK: - Properties
     
     var tmdbService: TMDBServiceProtocol { get }
+    var tvShowDetailDIContainer: TVShowDetailSceneDIContainer { get }
+
 }
 
 public final class DiscoverSceneCoordinator: CoordinatorProtocol {
@@ -52,4 +55,11 @@ public final class DiscoverSceneCoordinator: CoordinatorProtocol {
     }
     
     public func stop() { fatalError("Should not be stopped.") }
+    
+    func pushTVShowDetails(id: Int) {
+        dependencies
+            .tvShowDetailDIContainer
+            .makeCoordinator(navigationController: navigationController)
+            .start()
+    }
 }

@@ -19,11 +19,15 @@ struct DiscoverScene: View {
     // MARK: - Body
     
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVStack {
-                ForEach(viewModel.sections) { section in
-                    makeSectionView(title: section.title,
-                                    tvShows: section.tvShows)
+        if viewModel.sections.isEmpty {
+            ProgressView()
+        } else {
+            ScrollView(.vertical) {
+                LazyVStack(spacing: 16) {
+                    ForEach(viewModel.sections) { section in
+                        makeSectionView(title: section.title,
+                                        tvShows: section.tvShows)
+                    }
                 }
             }
         }
@@ -38,14 +42,18 @@ struct DiscoverScene: View {
                        showsIndicators: false) {
                 LazyHStack {
                     ForEach(tvShows) { tvShow in
-                        if tvShows.first == tvShow {
-                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                .padding(.leading, 8)
-                        } else if tvShows.last == tvShow {
-                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                .padding(.trailing, 8)
-                        } else {
-                            PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                        Button {
+                            viewModel.pushTVShowDetails(id: tvShow.id)
+                        } label: {
+                            if tvShows.first == tvShow {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                    .padding(.leading, 8)
+                            } else if tvShows.last == tvShow {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                                    .padding(.trailing, 8)
+                            } else {
+                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
+                            }
                         }
                     }
                 }

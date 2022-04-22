@@ -10,7 +10,8 @@ let package = Package(
     ],
     products: [
         .library(name: "WatchList", targets: ["WatchList"]),
-        .library(name: "Discover", targets: ["Discover"])
+        .library(name: "Discover", targets: ["Discover"]),
+        .library(name: "TVShowDetail", targets: ["TVShowDetail"])
     ],
     dependencies: [
         .package(name: "Core", path: "./Core"),
@@ -24,7 +25,11 @@ let package = Package(
         .target(name: "Discover", dependencies: [
             "Core",
             "Component",
+            "TVShowDetail",
             .product(name: "TMDB", package: "Service")
+        ]),
+        .target(name: "TVShowDetail", dependencies: [
+            "Core"
         ])
     ]
 )
