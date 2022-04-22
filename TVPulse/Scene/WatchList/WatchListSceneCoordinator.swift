@@ -9,8 +9,15 @@
 import UIKit.UINavigationController
 import SwiftUI
 import TPCore
+import TPService
 
-protocol WatchListSceneCoordinatorDependencies: AnyObject { }
+protocol WatchListSceneCoordinatorDependencies: AnyObject {
+    
+    // MARK: - Properties
+    
+    var tmdbService: TMDBServiceProtocol { get }
+    
+}
 
 final class WatchListSceneCoordinator: CoordinatorProtocol {
     
@@ -33,7 +40,7 @@ final class WatchListSceneCoordinator: CoordinatorProtocol {
     // MARK: - Methods
     
     func start() {
-        let viewModel = WatchListSceneViewModel()
+        let viewModel = WatchListSceneViewModel(tmdbService: dependencies.tmdbService)
         viewModel.coordinator = self
         
         let viewController = UIHostingController(rootView: WatchListScene(viewModel: viewModel))

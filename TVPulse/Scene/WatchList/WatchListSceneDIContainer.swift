@@ -7,10 +7,13 @@
 //
 
 import UIKit.UINavigationController
+import TPService
 
 final class WatchListSceneDIContainer {
     
-    struct Dependencies { }
+    struct Dependencies {
+        let tmdbService: TMDBServiceProtocol
+    }
     
     // MARK: - Properties
     
@@ -32,4 +35,10 @@ final class WatchListSceneDIContainer {
 
 // MARK: - WatchListSceneCoordinatorDependencies -
 
-extension WatchListSceneDIContainer: WatchListSceneCoordinatorDependencies { }
+extension WatchListSceneDIContainer: WatchListSceneCoordinatorDependencies {
+    
+    // MARK: - Properties
+    
+    var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
+    
+}

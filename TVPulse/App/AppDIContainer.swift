@@ -5,14 +5,20 @@
 //  Created by Maxime Maheo on 21/04/2022.
 //
 
+import TPService
+
 final class AppDIContainer {
     
     // MARK: - Services
     
+    private(set) lazy var tmdbService: TMDBServiceProtocol = {
+        TMDBService()
+    }()
+    
     // MARK: - Containers
     
     private(set) lazy var watchListSceneDIContainer: WatchListSceneDIContainer = {
-        let dependencies = WatchListSceneDIContainer.Dependencies()
+        let dependencies = WatchListSceneDIContainer.Dependencies(tmdbService: tmdbService)
         
         return WatchListSceneDIContainer(dependencies: dependencies)
     }()

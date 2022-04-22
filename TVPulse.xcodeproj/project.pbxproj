@@ -24,6 +24,7 @@
 		5291E29E28118EE900285D72 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29D28118EE900285D72 /* TabBarCoordinator.swift */; };
 		5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29F28118F1100285D72 /* AppCoordinator.swift */; };
 		5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E2A128118F2200285D72 /* AppDIContainer.swift */; };
+		52E24946281295C600CCCB16 /* TPService in Frameworks */ = {isa = PBXBuildFile; productRef = 52E24945281295C600CCCB16 /* TPService */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5232DCB02811F67F00085798 /* DiscoverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene.swift; sourceTree = "<group>"; };
 		5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneDIContainer.swift; sourceTree = "<group>"; };
 		5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneCoordinator.swift; sourceTree = "<group>"; };
+		5232DCB72811F88400085798 /* TPService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPService; path = Modules/TPService; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5245750B28118B9B00B48B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5245751428118B9E00B48B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 		5291E29D28118EE900285D72 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5291E29F28118F1100285D72 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5291E2A128118F2200285D72 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		52E249472812994C00CCCB16 /* TPModel */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPModel; path = Modules/TPModel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5291E28E28118D8B00285D72 /* Rswift in Frameworks */,
+				52E24946281295C600CCCB16 /* TPService in Frameworks */,
 				5291E29228118E0C00285D72 /* TPCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +78,8 @@
 		524574FF28118B9B00B48B86 = {
 			isa = PBXGroup;
 			children = (
+				52E249472812994C00CCCB16 /* TPModel */,
+				5232DCB72811F88400085798 /* TPService */,
 				5291E28F28118DEE00285D72 /* TPCore */,
 				5245750A28118B9B00B48B86 /* TVPulse */,
 				5245750928118B9B00B48B86 /* Products */,
@@ -177,6 +183,7 @@
 			packageProductDependencies = (
 				5291E28D28118D8B00285D72 /* Rswift */,
 				5291E29128118E0C00285D72 /* TPCore */,
+				52E24945281295C600CCCB16 /* TPService */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -518,6 +525,10 @@
 		5291E29128118E0C00285D72 /* TPCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TPCore;
+		};
+		52E24945281295C600CCCB16 /* TPService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TPService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
