@@ -9,7 +9,7 @@
 import UIKit.UINavigationController
 import SwiftUI
 import Core
-import Service
+import TMDB
 
 public protocol WatchListSceneCoordinatorDependencies: AnyObject {
     

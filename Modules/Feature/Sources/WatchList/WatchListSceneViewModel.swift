@@ -7,7 +7,7 @@
 //
 
 import Combine
-import Service
+import TMDB
 
 @MainActor
 final class WatchListSceneViewModel: ObservableObject {

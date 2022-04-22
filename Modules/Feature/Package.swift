@@ -17,7 +17,12 @@ let package = Package(
         .package(name: "Service", path: "./Service")
     ],
     targets: [
-        .target(name: "WatchList", dependencies: ["Core", "Service"]),
-        .target(name: "Discover", dependencies: ["Core", "Service"])
+        .target(name: "WatchList", dependencies: [
+            "Core",
+            .product(name: "TMDB", package: "Service")
+        ]),
+        .target(name: "Discover", dependencies: [
+            "Core"
+        ])
     ]
 )

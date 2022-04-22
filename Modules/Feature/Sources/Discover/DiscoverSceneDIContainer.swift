@@ -11,6 +11,9 @@ import UIKit.UINavigationController
 public final class DiscoverSceneDIContainer {
     
     public struct Dependencies {
+        
+        // MARK: - Lifecycle
+        
         public init() { }
     }
     

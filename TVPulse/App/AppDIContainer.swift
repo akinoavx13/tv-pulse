@@ -5,7 +5,7 @@
 //  Created by Maxime Maheo on 21/04/2022.
 //
 
-import Service
+import TMDB
 import WatchList
 import Discover
 

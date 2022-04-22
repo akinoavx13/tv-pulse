@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522D8D042812D6DC0085A879 /* TMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D032812D6DC0085A879 /* TMDB */; };
 		523FE4AE2812C910004937E1 /* Discover in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AD2812C910004937E1 /* Discover */; };
 		523FE4B02812C910004937E1 /* WatchList in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AF2812C910004937E1 /* WatchList */; };
 		523FE4B32812C96D004937E1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */; };
@@ -14,7 +15,6 @@
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
 		52723C792812AB8100DC107C /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C782812AB8100DC107C /* Rswift */; };
-		52723C802812ABF000DC107C /* Service in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7F2812ABF000DC107C /* Service */; };
 		52723C832812AC6000DC107C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C822812AC6000DC107C /* Core */; };
 		5291E28B28118D6D00285D72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E28A28118D6D00285D72 /* R.generated.swift */; };
 		5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29F28118F1100285D72 /* AppCoordinator.swift */; };
@@ -42,11 +42,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52723C802812ABF000DC107C /* Service in Frameworks */,
 				523FE4B02812C910004937E1 /* WatchList in Frameworks */,
 				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 				52723C832812AC6000DC107C /* Core in Frameworks */,
 				523FE4AE2812C910004937E1 /* Discover in Frameworks */,
+				522D8D042812D6DC0085A879 /* TMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,10 +148,10 @@
 			name = TVPulse;
 			packageProductDependencies = (
 				52723C782812AB8100DC107C /* Rswift */,
-				52723C7F2812ABF000DC107C /* Service */,
 				52723C822812AC6000DC107C /* Core */,
 				523FE4AD2812C910004937E1 /* Discover */,
 				523FE4AF2812C910004937E1 /* WatchList */,
+				522D8D032812D6DC0085A879 /* TMDB */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -477,6 +477,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		522D8D032812D6DC0085A879 /* TMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TMDB;
+		};
 		523FE4AD2812C910004937E1 /* Discover */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Discover;
@@ -489,10 +493,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
-		};
-		52723C7F2812ABF000DC107C /* Service */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Service;
 		};
 		52723C822812AC6000DC107C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;

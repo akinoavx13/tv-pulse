@@ -7,12 +7,17 @@
 //
 
 import UIKit.UINavigationController
-import Service
+import TMDB
 
 public final class WatchListSceneDIContainer {
     
     public struct Dependencies {
+        
+        // MARK: - Properties
+        
         let tmdbService: TMDBServiceProtocol
+        
+        // MARK: - Lifecycle
         
         public init(tmdbService: TMDBServiceProtocol) {
             self.tmdbService = tmdbService

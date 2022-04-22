@@ -9,14 +9,14 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "Service", targets: ["Service"])
+        .library(name: "TMDB", targets: ["TMDB"])
     ],
     dependencies: [
         .package(name: "Core", path: "./Core"),
         .package(name: "Model", path: "./Model")
     ],
     targets: [
-        .target(name: "Service", dependencies: [
+        .target(name: "TMDB", dependencies: [
             "Core",
             "Model",
             .product(name: "Networking", package: "Core")
