@@ -1,11 +1,11 @@
 //
-//  NWPaginatedResponse.swift
+//  PaginatedResponse.swift
 //  
 //
 //  Created by Maxime Maheo on 22/04/2022.
 //
 
-public struct NWPaginatedResponse<T: Codable>: Codable {
+public struct PaginatedResponse<T: Codable>: Codable {
     
     // MARK: - Properties
     

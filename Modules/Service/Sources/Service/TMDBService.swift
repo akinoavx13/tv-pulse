@@ -29,8 +29,8 @@ public final class TMDBService: TMDBServiceProtocol {
     // MARK: - Methods
     
     public func fetchDiscoverTVShow() async throws -> [TVShow] {
-        let response: NWPaginatedResponse<TVShow> = try await apiRequester.fetch(endpoint: TMDBEndpoint.dicoverTV,
-                                                                                 params: [TMDBParam.apiKey])
+        let response: PaginatedResponse<TVShow> = try await apiRequester.fetch(endpoint: TMDBEndpoint.dicoverTV,
+                                                                               params: [TMDBParam.apiKey])
         
         return response.results
     }
