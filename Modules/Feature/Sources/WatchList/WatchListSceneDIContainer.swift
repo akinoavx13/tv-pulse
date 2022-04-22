@@ -9,10 +9,14 @@
 import UIKit.UINavigationController
 import Service
 
-final class WatchListSceneDIContainer {
+public final class WatchListSceneDIContainer {
     
-    struct Dependencies {
+    public struct Dependencies {
         let tmdbService: TMDBServiceProtocol
+        
+        public init(tmdbService: TMDBServiceProtocol) {
+            self.tmdbService = tmdbService
+        }
     }
     
     // MARK: - Properties
@@ -21,13 +25,13 @@ final class WatchListSceneDIContainer {
     
     // MARK: - Lifecycle
     
-    init(dependencies: Dependencies) {
+    public init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
     
     // MARK: - Methods
     
-    func makeCoordinator(navigationController: UINavigationController) -> WatchListSceneCoordinator {
+    public func makeCoordinator(navigationController: UINavigationController) -> WatchListSceneCoordinator {
         WatchListSceneCoordinator(navigationController: navigationController,
                                   dependencies: self)
     }
@@ -39,6 +43,6 @@ extension WatchListSceneDIContainer: WatchListSceneCoordinatorDependencies {
     
     // MARK: - Properties
     
-    var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
+    public var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
     
 }

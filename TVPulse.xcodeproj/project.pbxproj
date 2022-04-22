@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5232DCB32811F67F00085798 /* DiscoverSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */; };
-		5232DCB42811F67F00085798 /* DiscoverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB02811F67F00085798 /* DiscoverScene.swift */; };
-		5232DCB52811F67F00085798 /* DiscoverSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */; };
-		5232DCB62811F67F00085798 /* DiscoverSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */; };
+		523FE4AE2812C910004937E1 /* Discover in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AD2812C910004937E1 /* Discover */; };
+		523FE4B02812C910004937E1 /* WatchList in Frameworks */ = {isa = PBXBuildFile; productRef = 523FE4AF2812C910004937E1 /* WatchList */; };
+		523FE4B32812C96D004937E1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */; };
 		5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245750B28118B9B00B48B86 /* AppDelegate.swift */; };
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
@@ -18,20 +17,12 @@
 		52723C802812ABF000DC107C /* Service in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7F2812ABF000DC107C /* Service */; };
 		52723C832812AC6000DC107C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C822812AC6000DC107C /* Core */; };
 		5291E28B28118D6D00285D72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E28A28118D6D00285D72 /* R.generated.swift */; };
-		5291E29928118E9F00285D72 /* WatchListSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */; };
-		5291E29A28118E9F00285D72 /* WatchListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29628118E9F00285D72 /* WatchListScene.swift */; };
-		5291E29B28118E9F00285D72 /* WatchListSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29728118E9F00285D72 /* WatchListSceneDIContainer.swift */; };
-		5291E29C28118E9F00285D72 /* WatchListSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29828118E9F00285D72 /* WatchListSceneCoordinator.swift */; };
-		5291E29E28118EE900285D72 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29D28118EE900285D72 /* TabBarCoordinator.swift */; };
 		5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29F28118F1100285D72 /* AppCoordinator.swift */; };
 		5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E2A128118F2200285D72 /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneViewModel.swift; sourceTree = "<group>"; };
-		5232DCB02811F67F00085798 /* DiscoverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene.swift; sourceTree = "<group>"; };
-		5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneDIContainer.swift; sourceTree = "<group>"; };
-		5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSceneCoordinator.swift; sourceTree = "<group>"; };
+		523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5245750B28118B9B00B48B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5245751428118B9E00B48B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,12 +31,8 @@
 		52723C772812AB7800DC107C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Model; path = Modules/Model; sourceTree = "<group>"; };
 		52723C7E2812ABE700DC107C /* Service */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Service; path = Modules/Service; sourceTree = "<group>"; };
 		52723C812812AC3D00DC107C /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Modules/Core; sourceTree = "<group>"; };
+		52723C842812BEF900DC107C /* Feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Feature; path = Modules/Feature; sourceTree = "<group>"; };
 		5291E28A28118D6D00285D72 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneViewModel.swift; sourceTree = "<group>"; };
-		5291E29628118E9F00285D72 /* WatchListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListScene.swift; sourceTree = "<group>"; };
-		5291E29728118E9F00285D72 /* WatchListSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneDIContainer.swift; sourceTree = "<group>"; };
-		5291E29828118E9F00285D72 /* WatchListSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneCoordinator.swift; sourceTree = "<group>"; };
-		5291E29D28118EE900285D72 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5291E29F28118F1100285D72 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5291E2A128118F2200285D72 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,28 +43,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				52723C802812ABF000DC107C /* Service in Frameworks */,
+				523FE4B02812C910004937E1 /* WatchList in Frameworks */,
 				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 				52723C832812AC6000DC107C /* Core in Frameworks */,
+				523FE4AE2812C910004937E1 /* Discover in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5232DCAE2811F66C00085798 /* Discover */ = {
+		523FE4B12812C96D004937E1 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				5232DCB12811F67F00085798 /* DiscoverSceneDIContainer.swift */,
-				5232DCB22811F67F00085798 /* DiscoverSceneCoordinator.swift */,
-				5232DCAF2811F67F00085798 /* DiscoverSceneViewModel.swift */,
-				5232DCB02811F67F00085798 /* DiscoverScene.swift */,
+				523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */,
 			);
-			path = Discover;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		524574FF28118B9B00B48B86 = {
 			isa = PBXGroup;
 			children = (
+				52723C842812BEF900DC107C /* Feature */,
 				52723C772812AB7800DC107C /* Model */,
 				52723C7E2812ABE700DC107C /* Service */,
 				52723C812812AC3D00DC107C /* Core */,
@@ -129,9 +116,7 @@
 		5245752128118C1F00B48B86 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				5291E29328118E5B00285D72 /* TabBar */,
-				5291E29428118E6100285D72 /* WatchList */,
-				5232DCAE2811F66C00085798 /* Discover */,
+				523FE4B12812C96D004937E1 /* TabBar */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -141,25 +126,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5291E29328118E5B00285D72 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				5291E29D28118EE900285D72 /* TabBarCoordinator.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		5291E29428118E6100285D72 /* WatchList */ = {
-			isa = PBXGroup;
-			children = (
-				5291E29728118E9F00285D72 /* WatchListSceneDIContainer.swift */,
-				5291E29828118E9F00285D72 /* WatchListSceneCoordinator.swift */,
-				5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */,
-				5291E29628118E9F00285D72 /* WatchListScene.swift */,
-			);
-			path = WatchList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +150,8 @@
 				52723C782812AB8100DC107C /* Rswift */,
 				52723C7F2812ABF000DC107C /* Service */,
 				52723C822812AC6000DC107C /* Core */,
+				523FE4AD2812C910004937E1 /* Discover */,
+				523FE4AF2812C910004937E1 /* WatchList */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -282,18 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5291E29B28118E9F00285D72 /* WatchListSceneDIContainer.swift in Sources */,
-				5291E29928118E9F00285D72 /* WatchListSceneViewModel.swift in Sources */,
-				5291E29A28118E9F00285D72 /* WatchListScene.swift in Sources */,
-				5291E29E28118EE900285D72 /* TabBarCoordinator.swift in Sources */,
 				5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */,
-				5232DCB62811F67F00085798 /* DiscoverSceneCoordinator.swift in Sources */,
 				5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */,
-				5232DCB52811F67F00085798 /* DiscoverSceneDIContainer.swift in Sources */,
 				5291E28B28118D6D00285D72 /* R.generated.swift in Sources */,
-				5291E29C28118E9F00285D72 /* WatchListSceneCoordinator.swift in Sources */,
-				5232DCB42811F67F00085798 /* DiscoverScene.swift in Sources */,
-				5232DCB32811F67F00085798 /* DiscoverSceneViewModel.swift in Sources */,
+				523FE4B32812C96D004937E1 /* TabBarCoordinator.swift in Sources */,
 				5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +477,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		523FE4AD2812C910004937E1 /* Discover */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Discover;
+		};
+		523FE4AF2812C910004937E1 /* WatchList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WatchList;
+		};
 		52723C782812AB8100DC107C /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;

@@ -10,14 +10,14 @@ import UIKit.UINavigationController
 import SwiftUI
 import Core
 
-protocol DiscoverSceneCoordinatorDependencies: AnyObject { }
+public protocol DiscoverSceneCoordinatorDependencies: AnyObject { }
 
-final class DiscoverSceneCoordinator: CoordinatorProtocol {
+public final class DiscoverSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Properties
     
-    var parentCoordinator: CoordinatorProtocol?
-    var children: [CoordinatorProtocol] = []
+    public var parentCoordinator: CoordinatorProtocol?
+    public var children: [CoordinatorProtocol] = []
     
     private let navigationController: UINavigationController
     private let dependencies: DiscoverSceneCoordinatorDependencies
@@ -32,7 +32,8 @@ final class DiscoverSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Methods
     
-    @MainActor func start() {
+    @MainActor
+    public func start() {
         let viewModel = DiscoverSceneViewModel()
         viewModel.coordinator = self
         
@@ -42,5 +43,5 @@ final class DiscoverSceneCoordinator: CoordinatorProtocol {
                                                 animated: false)
     }
     
-    func stop() { fatalError("Should not be stopped.") }
+    public func stop() { fatalError("Should not be stopped.") }
 }

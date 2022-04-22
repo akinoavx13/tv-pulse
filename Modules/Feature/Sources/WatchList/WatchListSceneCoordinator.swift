@@ -11,7 +11,7 @@ import SwiftUI
 import Core
 import Service
 
-protocol WatchListSceneCoordinatorDependencies: AnyObject {
+public protocol WatchListSceneCoordinatorDependencies: AnyObject {
     
     // MARK: - Properties
     
@@ -19,12 +19,12 @@ protocol WatchListSceneCoordinatorDependencies: AnyObject {
     
 }
 
-final class WatchListSceneCoordinator: CoordinatorProtocol {
+public final class WatchListSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Properties
     
-    var parentCoordinator: CoordinatorProtocol?
-    var children: [CoordinatorProtocol] = []
+    public var parentCoordinator: CoordinatorProtocol?
+    public var children: [CoordinatorProtocol] = []
     
     private let navigationController: UINavigationController
     private let dependencies: WatchListSceneCoordinatorDependencies
@@ -39,7 +39,8 @@ final class WatchListSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Methods
     
-    @MainActor func start() {
+    @MainActor
+    public func start() {
         let viewModel = WatchListSceneViewModel(tmdbService: dependencies.tmdbService)
         viewModel.coordinator = self
         
@@ -49,5 +50,5 @@ final class WatchListSceneCoordinator: CoordinatorProtocol {
                                                 animated: false)
     }
     
-    func stop() { fatalError("Should not be stopped.") }
+    public func stop() { fatalError("Should not be stopped.") }
 }

@@ -8,9 +8,11 @@
 
 import UIKit.UINavigationController
 
-final class DiscoverSceneDIContainer {
+public final class DiscoverSceneDIContainer {
     
-    struct Dependencies { }
+    public struct Dependencies {
+        public init() { }
+    }
     
     // MARK: - Properties
     
@@ -18,13 +20,13 @@ final class DiscoverSceneDIContainer {
     
     // MARK: - Lifecycle
     
-    init(dependencies: Dependencies) {
+    public init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
     
     // MARK: - Methods
     
-    func makeCoordinator(navigationController: UINavigationController) -> DiscoverSceneCoordinator {
+    public func makeCoordinator(navigationController: UINavigationController) -> DiscoverSceneCoordinator {
         DiscoverSceneCoordinator(navigationController: navigationController,
                                  dependencies: self)
     }

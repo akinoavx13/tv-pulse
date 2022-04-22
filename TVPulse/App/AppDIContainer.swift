@@ -6,6 +6,8 @@
 //
 
 import Service
+import WatchList
+import Discover
 
 final class AppDIContainer {
     
