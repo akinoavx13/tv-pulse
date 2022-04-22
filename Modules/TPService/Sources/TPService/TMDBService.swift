@@ -5,7 +5,7 @@
 //  Created by Maxime Maheo on 22/04/2022.
 //
 
-import TPModel
+import Model
 import TPCore
 
 public protocol TMDBServiceProtocol {

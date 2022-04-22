@@ -14,9 +14,10 @@
 		5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245750B28118B9B00B48B86 /* AppDelegate.swift */; };
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
+		52723C792812AB8100DC107C /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C782812AB8100DC107C /* Rswift */; };
+		52723C7B2812AB8400DC107C /* TPService in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7A2812AB8400DC107C /* TPService */; };
+		52723C7D2812AB8700DC107C /* TPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C7C2812AB8700DC107C /* TPCore */; };
 		5291E28B28118D6D00285D72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E28A28118D6D00285D72 /* R.generated.swift */; };
-		5291E28E28118D8B00285D72 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 5291E28D28118D8B00285D72 /* Rswift */; };
-		5291E29228118E0C00285D72 /* TPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5291E29128118E0C00285D72 /* TPCore */; };
 		5291E29928118E9F00285D72 /* WatchListSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */; };
 		5291E29A28118E9F00285D72 /* WatchListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29628118E9F00285D72 /* WatchListScene.swift */; };
 		5291E29B28118E9F00285D72 /* WatchListSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29728118E9F00285D72 /* WatchListSceneDIContainer.swift */; };
@@ -24,7 +25,6 @@
 		5291E29E28118EE900285D72 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29D28118EE900285D72 /* TabBarCoordinator.swift */; };
 		5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29F28118F1100285D72 /* AppCoordinator.swift */; };
 		5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E2A128118F2200285D72 /* AppDIContainer.swift */; };
-		52E24946281295C600CCCB16 /* TPService in Frameworks */ = {isa = PBXBuildFile; productRef = 52E24945281295C600CCCB16 /* TPService */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +38,7 @@
 		5245751428118B9E00B48B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5245751728118B9E00B48B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5245751928118B9E00B48B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52723C772812AB7800DC107C /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Model; path = Modules/Model; sourceTree = "<group>"; };
 		5291E28A28118D6D00285D72 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		5291E28F28118DEE00285D72 /* TPCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPCore; path = Modules/TPCore; sourceTree = "<group>"; };
 		5291E29528118E9F00285D72 /* WatchListSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListSceneViewModel.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		5291E29D28118EE900285D72 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5291E29F28118F1100285D72 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5291E2A128118F2200285D72 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
-		52E249472812994C00CCCB16 /* TPModel */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TPModel; path = Modules/TPModel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5291E28E28118D8B00285D72 /* Rswift in Frameworks */,
-				52E24946281295C600CCCB16 /* TPService in Frameworks */,
-				5291E29228118E0C00285D72 /* TPCore in Frameworks */,
+				52723C7D2812AB8700DC107C /* TPCore in Frameworks */,
+				52723C7B2812AB8400DC107C /* TPService in Frameworks */,
+				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 		524574FF28118B9B00B48B86 = {
 			isa = PBXGroup;
 			children = (
-				52E249472812994C00CCCB16 /* TPModel */,
+				52723C772812AB7800DC107C /* Model */,
 				5232DCB72811F88400085798 /* TPService */,
 				5291E28F28118DEE00285D72 /* TPCore */,
 				5245750A28118B9B00B48B86 /* TVPulse */,
@@ -181,9 +181,9 @@
 			);
 			name = TVPulse;
 			packageProductDependencies = (
-				5291E28D28118D8B00285D72 /* Rswift */,
-				5291E29128118E0C00285D72 /* TPCore */,
-				52E24945281295C600CCCB16 /* TPService */,
+				52723C782812AB8100DC107C /* Rswift */,
+				52723C7A2812AB8400DC107C /* TPService */,
+				52723C7C2812AB8700DC107C /* TPCore */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -517,18 +517,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5291E28D28118D8B00285D72 /* Rswift */ = {
+		52723C782812AB8100DC107C /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
 		};
-		5291E29128118E0C00285D72 /* TPCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TPCore;
-		};
-		52E24945281295C600CCCB16 /* TPService */ = {
+		52723C7A2812AB8400DC107C /* TPService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TPService;
+		};
+		52723C7C2812AB8700DC107C /* TPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TPCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
