@@ -12,6 +12,8 @@ enum TMDBEndpoint: String, Endpoint {
     case popularTVShows = "tv/popular"
     case topRatedTVShows = "tv/top_rated"
     case discoverTVShows = "discover/tv"
+    case airingTodayTVShows = "tv/airing_today"
+    case onTheAirTVShows = "tv/on_the_air"
     
     public func build() -> URL {
         guard let baseURL = URL(string: "https://api.themoviedb.org/3") else { fatalError() }

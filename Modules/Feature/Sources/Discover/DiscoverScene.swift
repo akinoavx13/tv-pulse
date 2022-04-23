@@ -19,17 +19,24 @@ struct DiscoverScene: View {
     // MARK: - Body
     
     var body: some View {
-        if viewModel.sections.isEmpty {
-            ProgressView()
-        } else {
-            ScrollView(.vertical) {
-                LazyVStack(spacing: 16) {
-                    ForEach(viewModel.sections) { section in
-                        makeSectionView(title: section.title,
-                                        tvShows: section.tvShows)
+        Group {
+            if viewModel.sections.isEmpty {
+                ProgressView()
+            } else {
+                ScrollView(.vertical) {
+                    LazyVStack(spacing: 16) {
+                        ForEach(viewModel.sections) { section in
+                            makeSectionView(title: section.title,
+                                            tvShows: section.tvShows)
+                        }
                     }
                 }
             }
+        }
+        .alert(item: $viewModel.error) { error in
+            Alert(title: Text(error.title),
+                  message: Text(error.message),
+                  dismissButton: .default(Text(error.dimissActionTitle)))
         }
     }
     
@@ -45,15 +52,9 @@ struct DiscoverScene: View {
                         Button {
                             viewModel.pushTVShowDetails(id: tvShow.id)
                         } label: {
-                            if tvShows.first == tvShow {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                    .padding(.leading, 8)
-                            } else if tvShows.last == tvShow {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                                    .padding(.trailing, 8)
-                            } else {
-                                PosterView(url: tvShow.wrappedPosterPathURL, width: 150)
-                            }
+                            PosterView(url: tvShow.wrappedPosterPathURL, width: 125)
+                                .padding(tvShows.first == tvShow ? .leading : .trailing,
+                                         tvShows.first == tvShow || tvShows.last == tvShow ? 16 : 0)
                         }
                     }
                 }
@@ -62,7 +63,7 @@ struct DiscoverScene: View {
             HStack {
                 Text(title)
                     .font(.headline)
-                    .padding(.leading, 8)
+                    .padding(.leading)
                 
                 Spacer()
             }
