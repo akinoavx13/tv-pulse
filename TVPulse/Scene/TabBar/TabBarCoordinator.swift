@@ -62,7 +62,7 @@ final class TabBarCoordinator: CoordinatorProtocol {
                 .watchListSceneDIContainer
                 .makeCoordinator(navigationController: navigationController)
             
-            let tabBarItem = UITabBarItem(title: "§Watch list",
+            let tabBarItem = UITabBarItem(title: R.string.localizable.watch_list(),
                                           image: R.image.icons.tvRegular(),
                                           selectedImage: nil)
             navigationController.tabBarItem = tabBarItem
@@ -71,7 +71,7 @@ final class TabBarCoordinator: CoordinatorProtocol {
                 .discoverSceneDIContainer
                 .makeCoordinator(navigationController: navigationController)
             
-            let tabBarItem = UITabBarItem(title: "§Discover",
+            let tabBarItem = UITabBarItem(title: R.string.localizable.discover(),
                                           image: R.image.icons.magnifyingGlassRegular(),
                                           selectedImage: nil)
             navigationController.tabBarItem = tabBarItem

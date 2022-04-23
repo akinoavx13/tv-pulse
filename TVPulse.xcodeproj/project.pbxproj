@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522838F928141370007FE507 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 522838FB28141370007FE507 /* Localizable.strings */; };
 		522D8D042812D6DC0085A879 /* TMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D032812D6DC0085A879 /* TMDB */; };
 		522D8D062812DC3A0085A879 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D052812DC3A0085A879 /* Model */; };
 		522D8D11281303550085A879 /* TVShowDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D10281303550085A879 /* TVShowDetail */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522838FA28141370007FE507 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		522D8D072812E78B0085A879 /* Component */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Component; path = Modules/Component; sourceTree = "<group>"; };
 		523FE4B22812C96D004937E1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		5245750828118B9B00B48B86 /* TVPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5245751928118B9E00B48B86 /* Info.plist */,
+				522838FB28141370007FE507 /* Localizable.strings */,
 				5245751428118B9E00B48B86 /* Assets.xcassets */,
 				5291E28A28118D6D00285D72 /* R.generated.swift */,
 				5245751628118B9E00B48B86 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */,
+				522838F928141370007FE507 /* Localizable.strings in Resources */,
 				5245751528118B9E00B48B86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +273,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		522838FB28141370007FE507 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522838FA28141370007FE507 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5245751628118B9E00B48B86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
