@@ -17,6 +17,15 @@
         "revision" : "8998cfe77f4fce79ee6dfab0c88a7d551659d8fb",
         "version" : "5.4.0"
       }
+    },
+    {
+      "identity" : "r.swift.plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/quentinfasquel/R.swift.Plugin",
+      "state" : {
+        "revision" : "90329b1a763367e008a20c227227e76028f9f1d2",
+        "version" : "5.4.0"
+      }
     }
   ],
   "version" : 2

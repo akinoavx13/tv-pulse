@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Feature",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v15)
     ],
@@ -16,20 +17,33 @@ let package = Package(
     dependencies: [
         .package(name: "Core", path: "./Core"),
         .package(name: "Service", path: "./Service"),
-        .package(name: "Component", path: "./Component")
+        .package(name: "Component", path: "./Component"),
+        .package(url: "https://github.com/mac-cain13/R.swift.Library", from: "5.4.0"),
+        .package(url: "https://github.com/quentinfasquel/R.swift.Plugin", from: "5.4.0")
     ],
     targets: [
-        .target(name: "WatchList", dependencies: [
-            "Core"
-        ]),
-        .target(name: "Discover", dependencies: [
-            "Core",
-            "Component",
-            "TVShowDetail",
-            .product(name: "TMDB", package: "Service")
-        ]),
-        .target(name: "TVShowDetail", dependencies: [
-            "Core"
-        ])
+        .target(name: "WatchList",
+                dependencies: [
+                    "Core"
+                ]
+               ),
+        .target(name: "Discover",
+                dependencies: [
+                    "Core",
+                    "Component",
+                    "TVShowDetail",
+                    .product(name: "TMDB", package: "Service"),
+                    .product(name: "RswiftDynamic", package: "R.swift.Library")
+                ],
+//                resources: [
+//                    .copy("Localizable.strings")
+//                ],
+                plugins: [.plugin(name: "RswiftPlugin", package: "R.swift.Plugin")]
+               ),
+        .target(name: "TVShowDetail",
+                dependencies: [
+                    "Core"
+                ]
+               )
     ]
 )

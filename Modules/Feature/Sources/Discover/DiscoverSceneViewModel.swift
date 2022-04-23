@@ -53,7 +53,7 @@ final class DiscoverSceneViewModel: ObservableObject {
         async let scienceFictionTVShows = tmdbService.fetchDiscoverTVShow(genres: [.scienceFiction])
         
         do {
-            sections = try await [.init(title: "§Popular", tvShows: popularTVShows),
+            sections = try await [.init(title: NSLocalizedString("popular", bundle: Bundle.module, comment: "ok"), tvShows: popularTVShows),
                                   .init(title: "§Top rated", tvShows: topRatedTVShows),
                                   .init(title: "§Science Fiction", tvShows: scienceFictionTVShows)]
         } catch {

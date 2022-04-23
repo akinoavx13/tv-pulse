@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		522838F928141370007FE507 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 522838FB28141370007FE507 /* Localizable.strings */; };
+		522838FD281414B9007FE507 /* RswiftDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 522838FC281414B9007FE507 /* RswiftDynamic */; };
+		522838FE281414B9007FE507 /* RswiftDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 522838FC281414B9007FE507 /* RswiftDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		522D8D042812D6DC0085A879 /* TMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D032812D6DC0085A879 /* TMDB */; };
 		522D8D062812DC3A0085A879 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D052812DC3A0085A879 /* Model */; };
 		522D8D11281303550085A879 /* TVShowDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 522D8D10281303550085A879 /* TVShowDetail */; };
@@ -17,12 +19,25 @@
 		5245750C28118B9B00B48B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245750B28118B9B00B48B86 /* AppDelegate.swift */; };
 		5245751528118B9E00B48B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5245751428118B9E00B48B86 /* Assets.xcassets */; };
 		5245751828118B9E00B48B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5245751628118B9E00B48B86 /* LaunchScreen.storyboard */; };
-		52723C792812AB8100DC107C /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C782812AB8100DC107C /* Rswift */; };
 		52723C832812AC6000DC107C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 52723C822812AC6000DC107C /* Core */; };
 		5291E28B28118D6D00285D72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E28A28118D6D00285D72 /* R.generated.swift */; };
 		5291E2A028118F1100285D72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E29F28118F1100285D72 /* AppCoordinator.swift */; };
 		5291E2A228118F2200285D72 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291E2A128118F2200285D72 /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		522838FF281414B9007FE507 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				522838FE281414B9007FE507 /* RswiftDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		522838FA28141370007FE507 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -50,10 +65,10 @@
 				522D8D062812DC3A0085A879 /* Model in Frameworks */,
 				523FE4B02812C910004937E1 /* WatchList in Frameworks */,
 				522D8D11281303550085A879 /* TVShowDetail in Frameworks */,
-				52723C792812AB8100DC107C /* Rswift in Frameworks */,
 				52723C832812AC6000DC107C /* Core in Frameworks */,
 				523FE4AE2812C910004937E1 /* Discover in Frameworks */,
 				522D8D042812D6DC0085A879 /* TMDB in Frameworks */,
+				522838FD281414B9007FE507 /* RswiftDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +164,7 @@
 				5245750528118B9B00B48B86 /* Frameworks */,
 				5245750628118B9B00B48B86 /* Resources */,
 				5245752328118C3900B48B86 /* Swiftlint */,
+				522838FF281414B9007FE507 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,13 +172,13 @@
 			);
 			name = TVPulse;
 			packageProductDependencies = (
-				52723C782812AB8100DC107C /* Rswift */,
 				52723C822812AC6000DC107C /* Core */,
 				523FE4AD2812C910004937E1 /* Discover */,
 				523FE4AF2812C910004937E1 /* WatchList */,
 				522D8D032812D6DC0085A879 /* TMDB */,
 				522D8D052812DC3A0085A879 /* Model */,
 				522D8D10281303550085A879 /* TVShowDetail */,
+				522838FC281414B9007FE507 /* RswiftDynamic */,
 			);
 			productName = TVPulse;
 			productReference = 5245750828118B9B00B48B86 /* TVPulse.app */;
@@ -497,6 +513,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		522838FC281414B9007FE507 /* RswiftDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftDynamic;
+		};
 		522D8D032812D6DC0085A879 /* TMDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TMDB;
@@ -516,11 +537,6 @@
 		523FE4AF2812C910004937E1 /* WatchList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WatchList;
-		};
-		52723C782812AB8100DC107C /* Rswift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5291E28C28118D8B00285D72 /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = Rswift;
 		};
 		52723C822812AC6000DC107C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
