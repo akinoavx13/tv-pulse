@@ -21,6 +21,7 @@ public struct TVShow: Codable, Identifiable, Equatable {
     public let voteAverage: Double?
     public let numberOfSeasons: Int?
     public let overview: String?
+    public let networks: [Network]?
     
     public var wrappedPosterPathURL: URL? {
         guard let posterPath = posterPath else { return nil }
@@ -38,5 +39,24 @@ extension TVShow {
         
         public let id: Int
         public let name: String
+    }
+}
+
+// MARK: - Network -
+
+extension TVShow {
+    public struct Network: Codable, Identifiable, Equatable {
+        
+        // MARK: - Properties
+        
+        public let id: Int
+        public let name: String
+        public let logoPath: String?
+        
+        public var wrappedLogoPathURL: URL? {
+            guard let logoPath = logoPath else { return nil }
+            
+            return URL(string: "https://image.tmdb.org/t/p/w500\(logoPath)")
+        }
     }
 }

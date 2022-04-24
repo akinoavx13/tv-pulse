@@ -16,7 +16,8 @@ let package = Package(
     dependencies: [
         .package(name: "Core", path: "./Core"),
         .package(name: "Service", path: "./Service"),
-        .package(name: "Component", path: "./Component")
+        .package(name: "Component", path: "./Component"),
+        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0"))
     ],
     targets: [
         .target(name: "WatchList", dependencies: [
@@ -31,6 +32,7 @@ let package = Package(
         .target(name: "TVShowDetail", dependencies: [
             "Core",
             "Component",
+            "Kingfisher",
             .product(name: "TMDB", package: "Service")
         ])
     ]

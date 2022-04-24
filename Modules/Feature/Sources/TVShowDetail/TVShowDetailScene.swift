@@ -8,6 +8,8 @@
 
 import SwiftUI
 import Component
+import Kingfisher
+import Model
 
 struct TVShowDetailScene: View {
     
@@ -22,59 +24,16 @@ struct TVShowDetailScene: View {
             if let tvShow = viewModel.tvShow {
                 ScrollView {
                     LazyVStack(alignment: .leading) {
-                        HStack {
-                            PosterView(url: tvShow.wrappedPosterPathURL,
-                                       width: 100)
-                            
-                            VStack(alignment: .leading,
-                                   spacing: 12) {
-                                HStack {
-                                    Text(tvShow.name)
-                                        .font(.title)
-                                        .bold()
-                                    
-                                    tvShow.firstAirDate.map {
-                                        Text("(\(String($0.prefix(4))))")
-                                            .opacity(0.6)
-                                    }
-                                }
-                                
-                                tvShow.genres.map { genres in
-                                    Text(genres.map { $0.name }.joined(separator: ", "))
-                                }
-                                
-                                HStack {
-                                    HStack(spacing: 4) {
-                                        Image(systemName: "star.fill")
-                                            .foregroundColor(.yellow)
-                                        
-                                        tvShow.voteAverage.map {
-                                            Text("\($0, specifier: "%.1f")")
-                                        }
-                                    }
-                                    
-                                    Text("•")
-                                    
-                                    tvShow.numberOfSeasons.map {
-                                        Text("\($0) §Season")
-                                    }
-                                    
-                                    Text("•")
-                                    
-                                    tvShow.episodeRunTime?.first.map {
-                                        Text("\($0) min")
-                                    }
-                                }
-                            }
-                        }
+                        makeHeaderView(tvShow: tvShow)
                         
                         Divider()
                         
-                        tvShow.overview.map {
-                            Text($0)
+                        if let overview = tvShow.overview,
+                           !overview.isEmpty {
+                            makeSynopsisView(overview: overview)
                         }
                     }
-                    .padding(.horizontal)
+                    .padding()
                 }
             } else {
                 ProgressView()
@@ -84,6 +43,68 @@ struct TVShowDetailScene: View {
             Alert(title: Text(error.title),
                   message: Text(error.message),
                   dismissButton: .default(Text(error.dimissActionTitle)))
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func makeHeaderView(tvShow: TVShow) -> some View {
+        HStack {
+            PosterView(url: tvShow.wrappedPosterPathURL,
+                       width: 100)
+            
+            VStack(alignment: .leading,
+                   spacing: 12) {
+                HStack {
+                    Text(tvShow.name)
+                        .font(.title)
+                        .bold()
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                    
+                    tvShow.firstAirDate.map {
+                        Text("(\(String($0.prefix(4))))")
+                            .opacity(0.6)
+                    }
+                }
+                
+                tvShow.genres.map { genres in
+                    Text(genres.map { $0.name }.joined(separator: ", "))
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                }
+                
+                HStack {
+                    HStack(spacing: 4) {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                        
+                        Text("\(tvShow.voteAverage ?? 0, specifier: "%.1f")")
+                    }
+                    
+                    Text("•")
+                    
+                    Text("\(tvShow.numberOfSeasons ?? 0) §Season.s")
+                        .lineLimit(1)
+                    
+                    Text("•")
+                    
+                    Text("\(tvShow.episodeRunTime?.first ?? 0) min")
+                        .lineLimit(1)
+                }
+            }
+        }
+    }
+    
+    private func makeSynopsisView(overview: String) -> some View {
+        VStack(alignment: .leading,
+               spacing: 12) {
+            Text("§Synopsis")
+                .font(.headline)
+            
+            Text(overview)
+            
+            Divider()
         }
     }
 }

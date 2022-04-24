@@ -48,8 +48,8 @@ public final class TVShowDetailSceneCoordinator: CoordinatorProtocol {
         viewModel.coordinator = self
         
         let viewController = UIHostingController(rootView: TVShowDetailScene(viewModel: viewModel))
-
-        navigationController.pushViewController(viewController, animated: true)
+        
+        navigationController.present(viewController, animated: true)
     }
     
     public func stop() { fatalError("Should not be stopped.") }
