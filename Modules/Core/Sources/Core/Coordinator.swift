@@ -14,7 +14,7 @@ public protocol CoordinatorProtocol: AnyObject {
     
     // MARK: - Methods
     
-    func start()
+    func start(params: Any...)
     func stop()
 }
 

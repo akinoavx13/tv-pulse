@@ -42,8 +42,8 @@ final class DiscoverSceneViewModel: ObservableObject {
     
     // MARK: - Methods
     
-    func pushTVShowDetails(id: Int) {
-        coordinator?.pushTVShowDetails(id: id)
+    func pushTVShowDetails(tvShowId: Int) {
+        coordinator?.pushTVShowDetails(tvShowId: tvShowId)
     }
     
     // MARK: - Private methods

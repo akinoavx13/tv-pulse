@@ -29,7 +29,9 @@ let package = Package(
             .product(name: "TMDB", package: "Service")
         ]),
         .target(name: "TVShowDetail", dependencies: [
-            "Core"
+            "Core",
+            "Component",
+            .product(name: "TMDB", package: "Service")
         ])
     ]
 )

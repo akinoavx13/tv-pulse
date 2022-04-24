@@ -42,24 +42,25 @@ public final class DiscoverSceneCoordinator: CoordinatorProtocol {
     // MARK: - Methods
     
     @MainActor
-    public func start() {
-        navigationController.navigationBar.prefersLargeTitles = true
+    public func start(params: Any...) {
         let viewModel = DiscoverSceneViewModel(tmdbService: dependencies.tmdbService)
         viewModel.coordinator = self
         
         let viewController = UIHostingController(rootView: DiscoverScene(viewModel: viewModel))
         viewController.title = "§Discover"
         
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.setViewControllers([viewController],
                                                 animated: false)
     }
     
     public func stop() { fatalError("Should not be stopped.") }
     
-    func pushTVShowDetails(id: Int) {
+    @MainActor
+    func pushTVShowDetails(tvShowId: Int) {
         dependencies
             .tvShowDetailDIContainer
             .makeCoordinator(navigationController: navigationController)
-            .start()
+            .start(params: tvShowId)
     }
 }

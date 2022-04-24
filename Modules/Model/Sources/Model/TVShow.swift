@@ -14,10 +14,29 @@ public struct TVShow: Codable, Identifiable, Equatable {
     public let id: Int
     public let name: String
     public let posterPath: String?
+    public let status: String?
+    public let genres: [Genre]?
+    public let firstAirDate: String?
+    public let episodeRunTime: [Int]?
+    public let voteAverage: Double?
+    public let numberOfSeasons: Int?
+    public let overview: String?
     
     public var wrappedPosterPathURL: URL? {
         guard let posterPath = posterPath else { return nil }
         
         return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
+    }
+}
+
+// MARK: - Genre -
+
+extension TVShow {
+    public struct Genre: Codable, Identifiable, Equatable {
+        
+        // MARK: - Properties
+        
+        public let id: Int
+        public let name: String
     }
 }

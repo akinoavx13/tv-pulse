@@ -7,14 +7,21 @@
 //
 
 import UIKit.UINavigationController
+import TMDB
 
 public final class TVShowDetailSceneDIContainer {
     
     public struct Dependencies {
+
+        // MARK: - Properties
+        
+        let tmdbService: TMDBServiceProtocol
         
         // MARK: - Lifecycle
         
-        public init() { }
+        public init(tmdbService: TMDBServiceProtocol) {
+            self.tmdbService = tmdbService
+        }
     }
     
     // MARK: - Properties
@@ -37,4 +44,10 @@ public final class TVShowDetailSceneDIContainer {
 
 // MARK: - TVShowDetailSceneCoordinatorDependencies -
 
-extension TVShowDetailSceneDIContainer: TVShowDetailSceneCoordinatorDependencies { }
+extension TVShowDetailSceneDIContainer: TVShowDetailSceneCoordinatorDependencies {
+    
+    // MARK: - Properties
+    
+    public var tmdbService: TMDBServiceProtocol { dependencies.tmdbService }
+    
+}

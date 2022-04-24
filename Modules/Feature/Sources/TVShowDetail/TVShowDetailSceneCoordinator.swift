@@ -9,8 +9,15 @@
 import UIKit.UINavigationController
 import SwiftUI
 import Core
+import TMDB
 
-public protocol TVShowDetailSceneCoordinatorDependencies: AnyObject { }
+public protocol TVShowDetailSceneCoordinatorDependencies: AnyObject {
+    
+    // MARK: - Properties
+    
+    var tmdbService: TMDBServiceProtocol { get }
+    
+}
 
 public final class TVShowDetailSceneCoordinator: CoordinatorProtocol {
     
@@ -32,12 +39,16 @@ public final class TVShowDetailSceneCoordinator: CoordinatorProtocol {
     
     // MARK: - Methods
     
-    public func start() {
-        let viewModel = TVShowDetailSceneViewModel()
+    @MainActor
+    public func start(params: Any...) {
+        guard let tvShowId = params.first as? Int else { fatalError("Could not find tvShowId Param") }
+        
+        let viewModel = TVShowDetailSceneViewModel(tmdbService: dependencies.tmdbService,
+                                                   tvShowId: tvShowId)
         viewModel.coordinator = self
         
         let viewController = UIHostingController(rootView: TVShowDetailScene(viewModel: viewModel))
-        
+
         navigationController.pushViewController(viewController, animated: true)
     }
     

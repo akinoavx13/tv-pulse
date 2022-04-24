@@ -33,7 +33,7 @@ public final class WatchListSceneCoordinator: CoordinatorProtocol {
     // MARK: - Methods
     
     @MainActor
-    public func start() {
+    public func start(params: Any...) {
         let viewModel = WatchListSceneViewModel()
         viewModel.coordinator = self
         

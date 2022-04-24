@@ -50,7 +50,7 @@ struct DiscoverScene: View {
                 LazyHStack {
                     ForEach(tvShows) { tvShow in
                         Button {
-                            viewModel.pushTVShowDetails(id: tvShow.id)
+                            viewModel.pushTVShowDetails(tvShowId: tvShow.id)
                         } label: {
                             PosterView(url: tvShow.wrappedPosterPathURL, width: 125)
                                 .padding(tvShows.first == tvShow ? .leading : .trailing,

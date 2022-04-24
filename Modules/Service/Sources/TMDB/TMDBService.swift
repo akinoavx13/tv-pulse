@@ -14,6 +14,7 @@ public protocol TMDBServiceProtocol {
     func fetchDiscoverTVShow(genres: [TMDBParam.Genres]) async throws -> [TVShow]
     func fetchAiringTodayTVShows() async throws -> [TVShow]
     func fetchOnTheAirTVShows() async throws -> [TVShow]
+    func fetchTVShowDetails(tvShowId: Int) async throws -> TVShow
 }
 
 public final class TMDBService: TMDBServiceProtocol {
@@ -74,5 +75,11 @@ public final class TMDBService: TMDBServiceProtocol {
                                                                                         TMDBParam.language])
         
         return response.results
+    }
+    
+    public func fetchTVShowDetails(tvShowId: Int) async throws -> TVShow {
+        try await apiRequester.fetch(endpoint: TMDBEndpoint.tvShowDetails(tvShowId: tvShowId),
+                                     params: [TMDBParam.apiKey,
+                                              TMDBParam.language])
     }
 }

@@ -34,7 +34,7 @@ final class AppDIContainer {
     }()
     
     private(set) lazy var tvShowDetailSceneDIContainer: TVShowDetailSceneDIContainer = {
-        let dependencies = TVShowDetailSceneDIContainer.Dependencies()
+        let dependencies = TVShowDetailSceneDIContainer.Dependencies(tmdbService: tmdbService)
         
         return TVShowDetailSceneDIContainer(dependencies: dependencies)
     }()
